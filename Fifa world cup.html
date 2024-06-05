@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World cup 2022</title>
+    <!-- Include Bootstrap CSS for responsiveness -->
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+    @font-face {
+            font-family: 'CustomFont';
+            src: url('ElectronicArtsText-BoldItalic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            width: 1100px;
+             height: auto;
+              display: block;
+               margin: 0 auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .custom-font {
+            font-family: 'CustomFont', Arial, sans-serif;
+            width: 1200px;
+             height: auto;
+              display: block;
+               margin: 0 auto;
+        }
+        /* Basic styles for the navbar */
+        .navvbar {
+            background-color: #ffffff;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navvbar a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .navvbar a img {
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .navvbar a img:hover {
+            transform: scale(1.1); /* Slightly enlarge the image on hover */
+        }
+        /* Optional: smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+        .video-container1 {
+            width: 900%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .video-container1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit:contain;
+        }
+          a { cursor: url('data:image/x-icon;base64,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'),
+         auto; }
+         .centered-image {
+            width: 1100px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Ensure paragraph text remains consistent */
+        section p {
+            font-size: 16px; /* Adjust this to match the font size used in other sections */
+            line-height: 1.5;
+        }
+        .centered-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+.centered-tex {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+.centered-te {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight:bolder;
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+.world-cup-section {
+        text-align: center;
+        padding: 50px 0;
+        color: white;
+    }
+
+    .background-image {
+        background-size: cover; /* Ensures the image covers the entire container */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        padding: 100px 20px;
+        color: rgb(0, 0, 0);
+        width: auto; /* Sets the width to 100% of the container */
+        height: auto; /* Allows the height to adjust automatically */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .content {
+        max-width: 800px; /* Adjust this value as needed */
+        margin: 0 auto;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    .cta-button {
+        background-color: #d91a2a;
+        color: white;
+        padding: 15px 30px;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 20px;
+    }
+        
+            .video-section {
+                text-align: center;
+                margin: 50px 0;
+            }
+        
+            .features {
+                display: flex;
+                justify-content: space-around;
+                padding: 50px 20px;
+            }
+        
+            .feature {
+                width: 30%;
+                text-align: center;
+                color: #ffffff;
+            }
+        
+            .feature h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        
+            .feature p {
+                font-size: 16px;
+            }
+            #splash {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    z-index: 1000;
+}
+
+#splash.fade-out {
+    opacity: 0;
+}
+
+#main-content1 {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+header {
+    position: relative; /* Add this line */
+    z-index: 1; /* Add this line */
+}
+
+main {
+    position: relative; /* Add this line */
+    z-index: 1; /* Add this line */
+}
+.video-container2 {
+    width: 400px; /* Set the width of the video container */
+    height: 300px; /* Set the height of the video container */
+    margin: 0 auto; /* Center the video container horizontally */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.video-container2 video {
+    width: 100%; /* Make the video fill the container horizontally */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/videos/2022/08/fifa-23-page-bg-fut-heroes-16x9.mp4" type="video/mp4">
+            <source src="https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/videos/2022/08/fifa-23-page-bg-fut-heroes-16x9.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <header>
+        <nav>
+            <div class="header_section">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="logo"><a href="index.html"><img src="image/1.png" alt="Logo"></a></div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                            <li class="nav-item"><a class="nav-link" href="FEATURES.html">NEW FEATURES</a></li>
+                            <li class="nav-item"><a class="nav-link" href="ULTIMATE TEAM.html">ULTIMATE TEAM</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Fifa world cup.html">FIFA WORLD CUP™</a></li>
+                            <li class="nav-item"><a class="nav-link" href="NEWS.html">NEWS & MEDIA</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+    </header>
+    <main>
+        <div id="splash">
+            <img src="image/fifaaaaaaaaaaa.png" alt="FIFA 23 Logo">
+          </div>
+          <div id="main-content1">
+          </div>
+          <script src="javascript1.js"></script>
+    </section>
+        
+    <div class="video-container1">
+        <video autoplay muted loop style="width: 1600px;">
+            <source src="image/World cup deep dive.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    </section>
+
+    <section class="world-cup-section">
+
+        <div class="background-image" style="background-image: url('image/rgwf23-wwc-adapative-logo-7x2-xl-5x2-lg-2x1-md.png.adapt.crop16x9.767w.png');">
+            <div class="content">
+                <h1>PLAY THE FIFA WORLD CUP 2022™</h1>
+                <p>Experience football’s greatest stage in EA SPORTS™ FIFA 23 from November 9th.</p>
+                <a href="https://www.ea.com/en-gb/games/fifa/fifa-23/world-cup" class="cta-button">Learn More</a>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <section class="features">
+        <div class="feature">
+            <div class="video-container2">
+                <video controls autoplay muted>
+                    <source src="image/FIFA 23 HOW TO CREATE A CUSTOM TOURNAMENTS.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <h2>TOURNAMENT MODE</h2>
+            <p>Play as one of the 32 qualified nations in an authentic single player recreation of the full FIFA World Cup 2022™.</p>
+
+            </div>
+        </div>
+        <div class="feature">
+            <div class="video-container2">
+                <video controls autoplay muted>
+                    <source src="image/Fifa 23 grand final live match.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <h2>FIFA WORLD CUP™: LIVE</h2>
+            <p>Play upcoming matches or rewrite the outcome of a past FIFA World Cup 2022™ game to change the destination of the biggest trophy in football.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="video-container2">
+                <video controls autoplay muted>
+                    <source src="image/FIFA 23 World Cup Mode Tutorial - Every Game Mode Explained!.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            <h2>YOUR FIFA WORLD CUP™</h2>
+            <p>Choose a nation and play an authentic single player tournament inheriting all the real-world progress made to date.</p>
+        </div>
+        </div>
+    </section>
+      
+    <div class="section_footer">
+        <div class="container"> 
+            <div class="footer_section_2">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">About FIFA 23</h2>
+                        <p class="ipsum_text_2">EA SPORTS™ FIFA and Marvel unite to bring more of football’s fan-favourites back to the pitch in FIFA 23, transforming FUT Heroes into Super Heroes.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">LATEST NEWS</h2>
+                        <div class="useful_link">
+                            <ul>
+                                <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-23/news">FIFA 23 NEWS</a></li>
+                                <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-mobile">FIFA MOBILE</a></li>
+                                <li><a href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">CONTACT US</h2>
+                        <input type="email" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                        <button class="subscribr_bt">SUBMIT</button>
+                    </div>
+                    <div class="social_icon">
+                        <ul>
+                            <li><a href="https://www.facebook.com/groups/223890916173390/"><img src="image/fb-icon.png" alt="Facebook"></a></li>
+                            <li><a href="https://twitter.com/EASFCDirect?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="image/twitter-icon.png" alt="Twitter"></a></li>
+                            <li><a href="https://lk.linkedin.com/posts/easports_fifa-23-the-fifa-world-cup-activity-7000577728001302529-a0wc"><img src="image/linkdin-icon.png" alt="LinkedIn"></a></li>
+                            <li><a href="https://www.instagram.com/easportsfut/?hl=en"><img src="image/instagram-icon.png" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="https://www.ea.com/en-gb/games/fifa/fifa-23">EA SPORTS FIFA 23</a></p>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS for responsive behavior -->
+    <script src="javascript2.js"></script>
+    <script src="javascript3.js"></script>
+    <script src="javascript4.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var splash = document.getElementById('splash');
+            var mainContent = document.getElementById('main-content1');
+    
+            setTimeout(function() {
+                splash.classList.add('fade-out');
+                setTimeout(function() {
+                    splash.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 1000); // Match this with the transition duration
+            }, 2000); // Adjust the duration of the splash screen display as needed
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA 23 Ultimate Team</title>
+    <!-- Include Bootstrap CSS for responsiveness -->
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+        .logo img {
+    width: 100px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('ElectronicArtsText-BoldItalic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9) !important; /* Set navbar background to white with slight transparency */
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 2;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #000000 !important; /* Ensure text is visible */
+        }
+
+        .navbar a img {
+            width: 50px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a img:hover {
+            transform: scale(1.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 80px 20px 20px; /* Adjusted padding to avoid overlap with fixed navbar */
+            min-height: 100vh;
+        }
+
+        .centered-image {
+            width: 1100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .centered-text {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 26px;
+            line-height: 1.5;
+        }
+
+        .centered-bold-text {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 1.5;
+        }
+
+        .centered-bolder-text {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-weight: bolder;
+            font-size: 26px;
+            line-height: 1.5;
+        }
+
+        .section_footer {
+            background-color: #333333;
+            padding: 20px 0;
+        }
+
+        .footer_section_2 {
+            color: #ffffff;
+        }
+
+        .footer_section_2 a {
+            color: #ffffff;
+        }
+
+        .copyright_section {
+            background-color: #222222;
+            padding: 10px 0;
+        }
+        .hero {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.hero-info {
+    flex: 1;
+}
+
+.hero h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.wide-image {
+    width: 100%; /* Set the image width to 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/videos/2022/08/fifa-23-page-bg-fut-heroes-16x9.mp4" type="video/mp4">
+            <source src="https://media.contentapi.ea.com/content/dam/ea/fifa/fifa-23/videos/2022/08/fifa-23-page-bg-fut-heroes-16x9.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <div class="content">
+        <!-- Main Navigation Bar -->
+        <div class="header_section">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="image/1.png" alt="Logo" style="width: 250px; height: auto;">
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="FEATURES.html">NEW FEATURES</a></li>
+                        <li class="nav-item"><a class="nav-link" href="ULTIMATE TEAM.html">ULTIMATE TEAM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Fifa world cup.html">FIFA WORLD CUP™</a></li>
+                        <li class="nav-item"><a class="nav-link" href="NEWS.html">NEWS & MEDIA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Content Section -->
+        <section id="fifa-world-cup" class="centered-text">
+            <div class="video-container1">
+                <img src="image/heroes logo.jpg" alt="Fut Heroes" class="wide-image">
+            </div>
+        </section>
+            <div class="centered-image">
+                <img src="image/heroes 3.webp" alt="Image" class="centered-image">
+                <a href="https://www.ea.com/en-gb/games/fifa/fifa-23/ultimate-team/fut-heroes"></a>
+            </div>
+            <p>"FUT Heroes" is a special feature in FIFA Ultimate Team introduced in FIFA 23. These cards celebrate legendary players who have left an indelible mark on the beautiful game. Each FUT Hero card showcases a specific moment or period in a player's career where they demonstrated extraordinary skill, leadership, or sportsmanship. These cards often come with boosted attributes, making them highly sought after by players looking to strengthen their squads. Additionally, FUT Heroes bring a sense of nostalgia and reverence to the game, allowing both new and seasoned players to experience the greatness of football legends from different eras.</p>
+            <p class="centered-bold-text">Pack a Hero and annihilate the opponents</p>
+        </section>
+        <div class="hero">
+            <img src="image/hero 1.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">LANDON DONOVAN</h3>
+                <p>Some heroes start young and fade away. Others only make their mark later on. Landon Donovan took the reins at his very first FIFA World Cup™ and never looked back. There the young American, just 20 years old, stood tall against his team’s arch enemy and headed in the goal to defeat Mexico and launch the US into the semi-finals.</p>
+                <p>Eight years later, with time about to run out against Algeria, it was Donovan who stepped up and scored to give the US their first top-of-the-group finish since 1930. Then a decade after his early heroics, following a career of unwavering bravery, unstoppable goal scoring, and stalwart leadership, Donovan did it again, slotting home a late penalty to win his fifth MLS Cup with the LA Galaxy. His legacy lives on through the MLS MVP award, named in honour of the most natural leader the league has ever seen. Donovan was a hero from start to finish—his uncanny ability to bravely answer the call with time running out making him a truly timeless FUT Hero.</p>
+            </div>
+        </div>
+    
+        <div class="hero">
+            <img src="image/hero 2.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">RICARDO CARVALHO</h3>
+                <p>By the time an attacking player decided how they would try to attack Ricardo Carvalho, they had already lost. They just didn’t know it yet. The Portuguese’s amazing sense of anticipation allowed him to thwart even the most impressive offensive attack. He knew what his opponents were going to do before they did, and he never gave them a chance.</p>
+                <p>At Porto, he went from a lowly loanee to the league’s best player, leading Porto to a 3-0 demolition of As Monaco- the perfect finish to one of the most iconic UEFA Champions League runs of all time. He would go on to another legendary run at Chelsea. Still, anyone who witnessed that unforgettable European night could see it coming. Ricardo Carvalho was a FUT Hero; it just hadn’t happened yet.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 3.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">CLAUDIO MARCHISIO</h3>
+                <p>Any hero can amaze us with physical gifts that make them better than everyone else. The greatest heroes inspire us to be better ourselves. There is no more perfect example than Claudio Marchisio. As a midfielder, his ability to coolly adapt to any situation combined with the skill and will to turn any possession into an opportunity to run, shoot, and score gave Juventus a legendary midfield</p>
+                <p>Marchisio lifted the bianconeri back to their perch atop Serie A, winning the first of nine consecutive scudetti in 2011/12. He wasn't called Principino merely for his heroic deeds, but for the way he always accomplished them with perfect poise and dignity, like the stunner he scored on the biggest stage for Italy at the FIFA World Cup 2014™ to send the Azzurri fans into raptures. His incredible skill, impeccable class, and connection to his hometown team make him the perfect example of a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 4.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">YAYA TOURÉ</h3>
+                <p>Like the legendary Colossus of Rhodes, Yaya Touré only had to stand on the pitch to inspire fear and awe in all who saw the size of the mighty midfield mountain. In 2011/12 he helped Manchester City hoist their first Premier League title in 44 long years. That season may be remembered for a certain Argentine striker’s historic last minute goal to win the league, but the influential Ivorian scored both goals in the game prior to keep their title hopes alive. </p>
+                <p>Combine a dominant club career with over 100 caps and appearances at three FIFA World Cup™ tournaments for Côte d'Ivoire, and Touré proved that when his teams needed him most he could summon the strength to put them on his back and keep their hopes alive.  Yaya Toure may not yet have a statue, but FUT Heroes don’t come any bigger.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 5.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">PARK JI-SUNG</h3>
+                <p>Foes who fail to foil his relentless attacks or avoid his persistent pressing claim he has three lungs. Those who fail to escape his merciless marking insist he has two hearts. But the truth of Park Ji-Sung is far more heroic. Inside him beats the heart of a tiger. He not only has the ceaseless stamina to go all out all game, but he also has the tiger’s instinct for the perfect time to strike. Often that moment comes late when an opponent is exhausted, worn out, and has nothing left. </p>
+                <p>But Park Ji-Sung knows that a tiger does not have to wait. His stunning assist just 36 seconds into a legendary title-deciding match against Chelsea made him a Premier League champion, while his goal for South Korea in the 2010 FIFA World Cup™ made him the first Asian player to score in three consecutive tournaments. The Tiger Heart is an undeniable FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 6.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">DIEGO FORLÁN</h3>
+                <p>On an ordinary day, any ordinary hero will do. But when you’re facing the biggest challenges, on the biggest stages, you need the kind of hero who will step up and save the day. When the lights are brightest and everyone else is overwhelmed, the hero you need is Diego Forlán. 2010 alone showed that the fearless Forlán would always rise to the occasion.</p>
+                <p>He had a brace and Man of The Match display in the UEFA Europa League Final for Atlético de Madrid, then he followed it up in the FIFA World Cup™, ending as joint top scorer, owner of the Golden Ball as the tournament’s best player, and instigator of the goal of the tournament – a volcanic volley from the edge of the box in the third-place play-off. Diego Forlán has proved he is no ordinary hero, which is why he is now a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 7.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">LÚCIO</h3>
+                <p>Some defenders sit and wait. Some guess and scheme. Then there was Lúcio, who brought the lightning. Fast, physical, and known for his thundering runs, he terrified foes with his tough-tackling style and endless energy. He heroically played every minute of Brazil’s 2002 FIFA World Cup™ championship run to help his nation become the first country to win the tournament five times. Beyond his 105 caps for his country, Lúcio brought his relentless storm to some of Europe’s biggest teams.</p>
+                <p>He helped Inter win a historic treble that included a long-awaited UEFA Champions League title that added even more weight to an already stacked trophy cabinet. Wherever he struck, fear entered into his opponents and success came to his team. As sure as thunder follows lightning, Lúcio is a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 8.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">RAFAEL MÁRQUEZ</h3>
+                <p>Not every hero is a leader. Most leaders aren’t heroes. Rafael Márquez has mastered being both. His heroics for his country over the course of over 20 years make him a beacon of Mexican football, where the elegant defender played in a fantastic five FIFA World Cup™  tournaments. Even at a young age, his legendary leadership was clear, being named national team captain at just 23 - and going on to wear the armband in a record five separate FIFA World Cup™ tournaments.</p>
+                <p>Always a star, Márquez could also share the spotlight, teaming up with fellow defender Carles Puyol to form a powerful partnership that in 2006 saw him become the first Mexican player to win the UEFA Champions League. His incredible play and inspiring leadership earned him the title El Kaiser of Michoacan, and also earned him his status as a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 9.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">JAVIER MASCHERANO</h3>
+                <p>You can’t always measure a hero by their size or stature. Javier Mascherano is living proof of that. Foolish strikers might have looked across the pitch at the tiny Argentine and dreamed of easy goals. Soon they’d discover that his boundless energy, tenacious commitment, and tough tackling make him an attacker’s nightmare. He played like a man with extra feet, shutting down every attack and regaining each possession to start a crushing counter.</p>
+                <p>He stood tall as a leader, captaining his country to the Quarter Final of the FIFA World Cup™ 2010. Mascherano also showed his amazing adaptability by taking on a new role in the heart of the defence and winning his first UEFA Champions League. Even when he didn’t have the armband, Mascherano led by example on the pitch with his style of play. After a giant career of 147 caps and countless trophies, Mascherano stands tall as a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 10.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">PETER CROUCH</h3>
+                <p>Some heroes scale skyscrapers. Peter Crouch was one. “A good touch for a big man” was the observation that followed the 2-metre-tall striker throughout a career that took him all over English football. Crouch had the size and skill that made it seem like he was the result of a heroic effort to construct the perfect footballer in a lab. He was a menace to defenders with both his feet - which had a knack for the spectacular, and his head - which holds the Premier League record for headed goals.</p>
+                <p>His critical contributions in Liverpool’s 2006 FA Cup Final comeback win, including a vital assist for Steven Gerrard, combined with a crucial header in the 2006 FIFA World Cup™ for England against Trinidad and Tobago were emblematic of his ability as a true target man. Still, it was the legendary robot celebration that became his signature. A true fan favourite, Crouch’s joy and heart make him maybe the most human FUT Hero of them all.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 11.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">DIRK KUYT</h3>
+                <p>It’s when things look darkest, hope is fading, and people are ready to give up that we most need heroes. The darker, more hopeless, and more depressing the situation, the more Dirk Kuyt is the hero you need. He will light up the room, fill you with hope, and empower you with his eclectic enthusiasm. Ask fans of any team Dirk Kuyt has ever played for, and they’ll speak of him in glowing terms. He played football with a full-throttle commitment, channelling a seemingly infinite amount of energy and excitement that energised teammates and fans alike.</p>
+                <p>His crucial assists in the Quarter and the Semi Final played a key role in the Netherlands’ route to the 2010 FIFA World Cup final. He was more than just a provider for his teammates, though. His second spell at Feyenoord saw him bag a final-day hat trick to clinch the 2016/2017 Eredivisie title before announcing his retirement from football three days later. What better way for a FUT Hero to bow out from the game?</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 13.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">HARRY KEWELL</h3>
+                <p>Most young heroes begin as sidekicks, taking their time to grow and learn before becoming full fledged heroes. Nobody was going to make Harry Kewell wait. He was a wunderkind whose magic was undeniable from the moment Leeds offered him a trial at just fifteen. A magic man with the ball at his feet, his perfectly precise ball control mystified defenders right from the start. In 2000 he earned the PFA Young Player of the Year award, followed by mesmerising displays in 2000/01 that helped his club reach the semi-final of the UEFA Champions League.</p>
+                <p>The Wizard of Aus also brought his mystical powers to his national team, conjuring a vital goal in the 2006 FIFA World Cup that took Australia to the round of 16 for the first ever time. One of his nation’s best-ever players, Kewell made us believe that magic was real, and that makes him a real FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 14.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">JEAN-PIERRE PAPIN</h3>
+                <p>Ordinary strikers see a pass as too off target, a deflection as too far away, or a cross as too high. Jean-Pierre Papin saw every ball in the box, or sometimes even near the box, as an opportunity for the spectacular. He converted ordinary opportunities like the most ruthless of strikers, but was a specialist in the impossible. The harder the ball was to reach, the more he effortlessly twisted and turned his body like an acrobat to not only meet it but then somehow drive it powerfully into the back of the net.</p>
+                <p>Two goals on the biggest stage at the FIFA World Cup™ helped his nation vault to third place, but it was his hat trick with Olympique de Marseille in the 1989 Coupe de France final where he clinched his super status. The Ballon d’Or that followed later just went to prove that he is perfectly positioned as a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 15.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">SIDNEY GOVOU</h3>
+                <p>Sidney Govou is the kind of hero who is synonymous with their home city. Lyon has seven Ligue 1 titles to their name. So does Sidney Govou. The lionhearted winger led OL to every league triumph in their history, winning seven straight to catapult his childhood club to the upper echelons of French football. He roared onto the European stage in 2001 with two ferocious strikes in the UEFA Champions League, then again on the world stage with a spark of inspiration in the 2006 FIFA World Cup™ knockouts against Spain. </p>
+                <p>A hero of skill, style, and loyalty, Govou’s dazzling decade at OL cemented his legacy as a hero dedicated to his city—the lion of Lyon.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/16.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">TOMAS BROLIN</h3>
+                <p>Some heroes have unnatural powers. Tomas Brolin was a powerful force of nature. A heroic head turner, he hit the pitch like a tornado leaving destroyed defenders in his wake. Brolin’s speed and agility made him like a whirlwind with the ball at his feet, helping him to score the decisive goal in Parma’s 1-0 victory in the 1991/1992 Coppa Italia semi-final on their way to the club’s first ever trophy.</p>
+                <p>Perhaps his most famous goal came in the 1994 FIFA World Cup™ Quarter Final, when a clever free kick routine ended in Brolin blowing past defenders to blast the ball into the net as Sweden went on to finish an impressive third place in the tournament. Almost as iconic as the goal was Brolin’s signature celebration. He’d raise his right fist into the air and do a full 360 pirouette letting friend, fan, and foe alike know the Swedish storm had struck. His dizzying displays, gorgeous goals, and creative celebration make him a natural FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 17.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">RUDI VÖLLER</h3>
+                <p>When defenders looked up to see The Flying German’s instantly recognisable flowing golden hair flying past them, they knew it was already too late. Völler was a clinical striker with the record to match, picking up the Bundesliga top goalscorer and Footballer of the Year award in 1982/83. His impressive 47 goals in 90 caps for his nation included him lifting the FIFA World Cup™ trophy in 1990, with three goals in the tournament and a place in the starting XI for the final. </p>
+                <p>Always a scoring threat, defenders have to be glad there is only one Rudi Völler, a one-of-a-kind FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 218.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">HIDETOSHI NAKATA</h3>
+                <p>Hidetoshi Nakata looks every bit the hero. But it’s the moment when you realise you aren’t looking at him, when he has somehow slipped away, that he’s at his most dangerous. Like a stealthy super spy, the attacking midfielder would somehow secretly sneak away from his defenders. Then he’d suddenly surface to either take the shot himself or slip a perfect pass to set up a teammate. His stylish talent convinced Parma to make him the most expensive Asian footballer ever, then the agile agent showed he was more than worth it in the first leg final of the Coppa Italia when he snuck into the box against Juventus to score a vital scissor kick.</p>
+                <p>The same summer the FIFA World Cup™ came to Japan, with Nakata netting on home turf in a 2-0 win against Tunisia to confirm his team’s place in the knockout stages and his own hero status. A hero that demanded your attention and then could somehow disappear until he was wherever the mission required, it is no secret why he’s a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 20.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">JAY-JAY OKOCHA</h3>
+                <p>Being a hero isn’t easy. But watch Jay-Jay Okocha play, and he might just fool you. One of African football’s best-ever players, he was a true entertainer on the pitch. Of course, maybe the secret to playing with such style and cool nonchalance is knowing that you’ve always got another trick or five-star skill hidden up your sleeve. The most expensive African footballer ever when he joined Paris Saint-Germain in 1998, Okocha was mesmerising in Nigeria’s impressive opening win against Spain in the 1998 FIFA World Cup™ when he grabbed the spotlight of the world’s biggest stage and revealed his incredible talent to the world.</p>
+                <p>Like any good trickster, he suddenly appeared where he was least expected in Bolton, only to put on a spectacular show in the Premier League. His wonder goal in a crucial six-pointer against relegation rivals West Ham United cemented his hero status. Still, it’s the way he always had you watching carefully for his next fantastic trick that makes him a show-stopping FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 21.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">JOAN CAPDEVILA</h3>
+                <p>Where’s a hero when you really need them? That’s not a question anyone ever asked when Joan Capdevila was on the pitch. The marauding fullback charged down attackers and bounded forward to support his teammates because nothing was going to keep this hero from being wherever he might be needed. And nothing better demonstrates his commitment to not only being where he was needed but heroically being there whenever he was needed more than the 2010 FIFA World Cup™ where he played every single minute on Spain’s road to international glory.</p>
+                <p>His brace against Getafe CF in 2009 will long live in the memories of Villarreal fans everywhere, the epitome of the same tireless drive to push forward – and push his side up the table – he showed every time he stepped on the pitch. For Capdevila, being the kind of hero you could always count on is what makes him a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 22.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">WŁODZIMIERZ SMOLAREK</h3>
+                <p>Foes who faced Włodzimierz Smolarek found only frustration. The Polish hero brought a feisty, never give up attitude that drove opponents crazy. They would think they had him lined up, and he’d be gone. They’d try to press him, and he’d have shifted by them like they weren’t even there. They’d believe they’d finally trapped him in the corner, only for him to shift things around and reveal that he had them right where he wanted them.</p>
+                <p>His ability to play like defenders simply could not touch him was key in Eintracht Frankfurt’s 1988 DFB-Pokal title. The sometimes seemingly insubstantial super star made substantial contributions to Poland’s 1982 FIFA World Cup™ run as they achieved an unforgettable third place finish, and he made an untouchable argument that he is a FUT Hero.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 23.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">SAEED AL OWAIRAN</h3>
+                <p>Don’t let the smile fool you. Just because Saeed Al Owairan is smiling doesn’t mean he isn’t just waiting for an opportunity to suddenly strike. Like an eagle, he heroically swooped in against Belgium in 1994 to score one of the greatest ever FIFA World Cup™ goals. Spotting his target while still inside his own half, he flew past five defenders and smashed the ball past the keeper.</p>
+                <p>Al Owairan’s soaring speed and his eagle eye for goal helped the Saudi striker add another fantastic feather to his 75 national caps when he scored in the 1993 Crown Prince Cup final to lead the club he stood by his whole career, Al-Shabab, to yet another trophy during his loyal tenure. It’s possible Saeed Al Owairan would still sport his signature smile even if his career wasn’t full of heroic accomplishments, but the fact that we’ll never know is what makes him a FUT Hero, giving just one more thing to smile about.</p>
+            </div>
+        </div>
+        <div class="hero">
+            <img src="image/hero 25.png" alt="Hero Image">
+            <div class="hero-info">
+                <h3 class="centered-bold-text">LEDLEY KING</h3>
+                <p>Ledley King was born to rule North London. His story epitomises the hero’s journey—raised within kicking distance of White Hart Lane and rising from local lad to local legend. The Tottenham star towered over strikers every time he took the pitch, halting even the sturdiest goal-scorers in their tracks with his strength, anticipation, and commitment to every challenge.</p>
+                <p>He dedicated his entire career to the club he loved and punctuated his loyal reign with a pure moment of triumph, hoisting the EFL Cup trophy in 2008. To captain a club is to champion a community, and FUT Hero Ledley King never forgot where he was from.</p>
+            </div>
+        </div>
+
+
+        <!-- Footer Section -->
+        <div class="section_footer">
+            <div class="container"> 
+                <div class="footer_section_2">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <h2 class="account_text">About FIFA 23</h2>
+                            <p class="ipsum_text_2">EA SPORTS™ FIFA and Marvel unite to bring more of football’s fan-favourites back to the pitch in FIFA 23, transforming FUT Heroes into Super Heroes.</p>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <h2 class="account_text">LATEST NEWS</h2>
+                            <div class="useful_link">
+                                <ul>
+                                    <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-23/news">FIFA 23 NEWS</a></li>
+                                    <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-mobile">FIFA MOBILE</a></li>
+                                    <li><a href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <h2 class="account_text">CONTACT US</h2>
+                            <input type="email" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                            <button class="subscribr_bt">SUBMIT</button>
+                        </div>
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="https://www.facebook.com/groups/223890916173390/"><img src="image/fb-icon.png" alt="Facebook"></a></li>
+                                <li><a href="https://twitter.com/EASFCDirect?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="image/twitter-icon.png" alt="Twitter"></a></li>
+                                <li><a href="https://lk.linkedin.com/posts/easports_fifa-23-the-fifa-world-cup-activity-7000577728001302529-a0wc"><img src="image/linkdin-icon.png" alt="LinkedIn"></a></li>
+                                <li><a href="https://www.instagram.com/easportsfut/?hl=en"><img src="image/instagram-icon.png" alt="Instagram"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="copyright_section">
+            <div class="container">
+                <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="https://www.ea.com/en-gb/games/fifa/fifa-23">EA SPORTS FIFA 23</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS for responsive behavior -->
+    <script src="javascript2.js"></script>
+    <script src="javascript3.js"></script>
+    <script src="javascript4.js"></script>
+</body>
+</html>
+
+
+

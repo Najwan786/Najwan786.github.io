@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA 23 Features</title>
+    <!-- Include Bootstrap CSS for responsiveness -->
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+         @font-face {
+            font-family: 'CustomFont';
+            src: url('ElectronicArtsText-BoldItalic.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            width: 1100px;
+             height: auto;
+              display: block;
+               margin: 0 auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .custom-font {
+            font-family: 'CustomFont', Arial, sans-serif;
+            width: 1200px;
+             height: auto;
+              display: block;
+               margin: 0 auto;
+        }
+        /* Basic styles for the navbar */
+        .navvbar {
+            background-color: #000000;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .navvbar a {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .navvbar a img {
+            width: 50px; /* Adjust the width as needed */
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .navvbar a img:hover {
+            transform: scale(1.1); /* Slightly enlarge the image on hover */
+        }
+        /* Optional: smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+        .video-container1 {
+            width: 900%;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .video-container1 img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit:contain;
+        }
+          a { cursor: url('data:image/x-icon;base64,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'),
+         auto; }
+         .centered-image {
+            width: 1100px; /* Set the desired width */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        /* Ensure paragraph text remains consistent */
+        section p {
+            font-size: 16px; /* Adjust this to match the font size used in other sections */
+            line-height: 1.5;
+        }
+        .centered-text {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+.centered-tex {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+.centered-te {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight:bolder;
+    font-size: 26px; /* Adjust this to match the font size used in other sections */
+    line-height: 1.5;
+}
+    </style>
+</head>
+<body>
+    <!-- Main Navigation Bar -->
+    <div class="header_section">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="image/1.png" alt="Logo"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="FEATURES.html">NEW FEATURES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ULTIMATE TEAM.html">ULTIMATE TEAM</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Fifa world cup.html">FIFA WORLD CUP™</a></li>
+                    <li class="nav-item"><a class="nav-link" href="NEWS.html">NEWS & MEDIA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Video Container -->
+    <div class="video-container1">
+        <img src="image/NEW FEATURES.jpg" alt="NEW FEATURES">
+    </div>
+
+    <!-- Features Navigation with Images -->
+    <nav class="navvbar">
+        <a href="#fifa-world-cup"><img src="image/worldcup small.png" alt="FIFA World Cup">
+        <span>FIFA WORLD CUP™</span></a>
+        <a href="#womens-club-football"><img src="image/womens small.png" alt="Women's Club Football">
+        <span>Women's Club Football</span></a>
+        <a href="#gameplay"><img src="image/gameplaysmall.png" alt="Gameplay">
+        <span>Gameplay</span></a>
+        <a href="#ultimate-team"><img src="image/fut samll.png" alt="Ultimate Team">
+        <span>Ultimate Team</span></a>
+        <a href="#career-mode"><img src="image/career small.png" alt="Career Mode">
+        <span>Career Mode</span></a>
+        <a href="#matchday-experience"><img src="image/matchday samll.png" alt="Matchday Experience">
+        <span>Matchday Experience</span></a>
+        <a href="#pro-clubs-volta"><img src="image/pro clubs small.png" alt="Pro Clubs & Volta">
+        <span>Pro Clubs & Volta</span></a>
+    </nav>
+
+    <!-- Feature Sections -->
+    <section id="fifa-world-cup" class="centered-text">
+        <h2>FIFA WORLD CUP™</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/12.jpg" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="centered-text">Experience the pinnacle of international football with the FIFA World Cup Qatar 2022™ and FIFA Women’s World Cup Australia and New Zealand 2023™ as post-launch content updates at no additional cost. Stay tuned for more details in the build-up to each tournament.</p>
+        <p class="centered-tex">MORE INFO SOON</p>
+    </section>
+
+    <section id="womens-club-football"class="centered-text">
+        <h2>WOMEN'S CLUB FOOTBALL</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/womens club.jpg" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="centered-text">Play as women’s club teams for the first time in EA SPORTS FIFA history with the Barclays Women’s Super League and Division 1 Arkema, and the UEFA Women’s Champions League knockout stage coming to FIFA 23 in early 2023. Plus, enjoy dedicated HyperMotion2 capture on next-gen that brings unique, true-to-life football motion to the women’s game.</p>
+    </section>
+
+    <section id="gameplay"class="centered-text">
+        <h2>FIFA 23 GAMEPLAY</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/Gameplay.webp" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="custom-font">HyperMotion2 TECHNOLOGY</p>
+    </section>
+
+    <section id="ultimate-team"class="centered-text">
+        <h2>FIFA ULTIMATE TEAM™</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/ULTIMATE.webp" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="centered-text">Build your dream squad from thousands of players...</p>
+    </section>
+
+    <section id="career-mode"class="centered-text">
+        <h2>CAREER MODE</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/Career.jpg" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="centered-text">Live out your football dreams as a manager or a player in Career Mode FIFA 23 brings you the ability to define your personality as a player, manage as some of football’s most famous names, and enjoy a new way to play your season with Playable Highlights in the most authentic FIFA Career Mode experience to date.</p>
+    </section>
+
+    <section id="matchday-experience"class="centered-text">
+        <h2>MATCHDAY EXPERIENCE</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/15.webp" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+        <p class="centered-text">From augmented reality broadcast replays to hyper-realistic pitch surfaces and enhanced stadium atmosphere, get an elevated matchday experience in FIFA 23 on next-gen platforms.</p>
+    </section>
+
+    <section id="pro-clubs-volta"class="centered-text">
+        <h2>PRO CLUBS & VOLTA FOOTBALL</h2>
+        <div class="video-container1">
+            <div class="image_2"><img src="image/Pro clubs.jpg" alt="Image" style="width: 1100px; height: auto; display: block; margin: 0 auto;"></div>
+            <p class="centered-text"><strong>PRO CLUBS</strong></p>
+        <p class="centered-text">Pro Clubs in FIFA 23 is a multiplayer mode where players create and customize their own virtual pro and join or form clubs with friends. Teams compete in online matches, with each player controlling their own unique pro, aiming to rise through the ranks and earn promotions.</p>
+        <p class="centered-text"><strong>VOLTA FOOTBALL</strong></p>
+            <p class="centered-text"> Football in FIFA 23 focuses on small-sided, street-style football matches played in diverse, urban locations around the world. It emphasizes flair, creativity, and fast-paced gameplay, offering a variety of modes and customization options for players to create and style their own characters and teams.</p>
+    </section>
+
+    <!-- Footer Section -->
+    <div class="section_footer">
+        <div class="container"> 
+            <div class="footer_section_2">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">About FIFA 23</h2>
+                        <p class="ipsum_text_2">EA SPORTS™ FIFA and Marvel unite to bring more of football’s fan-favourites back to the pitch in FIFA 23, transforming FUT Heroes into Super Heroes.</p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">LATEST NEWS</h2>
+                        <div class="useful_link">
+                            <ul>
+                                <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-23/news">FIFA 23 NEWS</a></li>
+                                <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-mobile">FIFA MOBILE</a></li>
+                                <li><a href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <h2 class="account_text">CONTACT US</h2>
+                        <input type="email" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+                        <button class="subscribr_bt">SUBMIT</button>
+                    </div>
+                    <div class="social_icon">
+                        <ul>
+                            <li><a href="https://www.facebook.com/groups/223890916173390/"><img src="image/fb-icon.png" alt="Facebook"></a></li>
+                            <li><a href="https://twitter.com/EASFCDirect?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="image/twitter-icon.png" alt="Twitter"></a></li>
+                            <li><a href="https://lk.linkedin.com/posts/easports_fifa-23-the-fifa-world-cup-activity-7000577728001302529-a0wc"><img src="image/linkdin-icon.png" alt="LinkedIn"></a></li>
+                            <li><a href="https://www.instagram.com/easportsfut/?hl=en"><img src="image/instagram-icon.png" alt="Instagram"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="https://www.ea.com/en-gb/games/fifa/fifa-23">EA SPORTS FIFA 23</a></p>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS for responsive behavior -->
+    <script src="javascript2.js"></script>
+    <script src="javascript3.js"></script>
+    <script src="javascript4.js"></script>
+</body>
+</html>

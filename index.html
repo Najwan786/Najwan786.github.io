@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EA SPORTS FIFA 23</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="features.css">
+<style>
+body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+ #splash {
+            background-color: rgb(255, 255, 255);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+}
+#main-content1 {
+            display: none;
+            width: 100%;
+            height: 100%;
+}
+
+ .video-container {
+  width: 100%;
+  max-width: 100%; /* Set height to auto to maintain aspect ratio */
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto; /* Ensure the video fills the container vertically */
+}
+/* CSS for the video container */
+.video_container1 {
+    position: relative;
+    width: 80%; /* Adjust width as desired */
+    max-width: 800px; /* Maximum width for responsiveness */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.video_container1 video {
+    width: 100%;
+    height: auto;
+}
+
+/* CSS for the image overlay */
+.image_overlay {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+
+}
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff5733; /* Change to your desired hover color */
+        }
+
+        /* Animation for footer social icons */
+        .social_icon ul li a img {
+            transition: transform 0.3s ease;
+        }
+        .social_icon ul li a img:hover {
+            transform: rotate(360deg); /* Rotate the image on hover */
+        }
+
+        /* Animation for shop button */
+        .shop_bt_2 a {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+        .shop_bt_2 a:hover {
+            background-color: #ff5733; /* Change to your desired hover background color */
+            color: #fff; /* Change to your desired hover text color */
+            transform: scale(1.1); /* Pulse effect on hover */
+        }
+
+        /* Animation for images */
+        .image_2 img {
+            transition: transform 0.3s ease;
+        }
+        .image_2 img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        /* General animation settings */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        body {
+            animation: fadeIn 1s ease-in-out;
+            font-family: Arial, sans-serif;
+        }
+        a { cursor: url('data:image/x-icon;base64,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'),
+         auto; }
+        
+    </style>
+</style>
+</head>
+<body>
+	<!-- header section start -->
+	<div class="header_section">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="logo"><a href="index.html"><img src="image/1.png"></a></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="FEATURES.html">NEW FEATURES</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ULTIMATE TEAM.html">ULTIMATE TEAM</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Fifa world cup.html">FIFA WORLD CUP™</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="NEWS.html">NEWS & MEDIA</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+              <div class="video-container">
+                <video autoplay muted loop>
+                  <source src="image/fifa official gameplay deepdive.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+                <div class="image_1"><img src="images/img-1.png"></div>
+                <div id="splash">
+                  <img src="image/1.png" alt="FIFA 23 Logo">
+                </div>
+                <div id="main-content1">
+                </div>
+                <script src="javascript1.js"></script>
+  <!-- banner section end -->
+  <!-- about section start -->
+  <div class="about_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="image_2"><img src="image/1.jpg"></div>
+        </div>
+        <div class="col-md-6">
+          <h1 class="about_text">ABOUT FIFA 23</h1>
+          <p class="lorem_text">Welcome to the world of FIFA 23, where soccer comes to life with unparalleled realism and excitement. Developed by EA Sports, FIFA 23 builds upon the success of its predecessors to deliver the ultimate soccer gaming experience.</p>
+          <div class="shop_bt_2"><a href="https://www.ea.com/en-gb/games/fifa/fifa-23/buy/pc">BUY NOW</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about section end -->
+  <!-- product section start -->
+  <div class="product_section layout_padding">
+    <div class="container">
+      <div class="product_text">Our <span style="color: #5ca0e9;">products</span></div>
+      <p class="long_text">
+        <div class="product_section_2">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="text-center"> <!-- Added to center align -->
+                <div class="image_2"><img src="image/new1.jpg"></div>
+              </div>
+              <div class="price_text">Price AED <span style="color: #3a3a38;">350</span></div>
+              <h1 class="game_text">Video Game</h1>
+              <p class="long_text">Dive into the exhilarating world of football with FIFA 23, the latest installment in the iconic FIFA franchise. Experience the thrill of the beautiful game like never before with cutting-edge gameplay, stunning visuals, and innovative features. Whether you're competing against friends in fast-paced matches, embarking on a journey to football glory in Career Mode, or building your ultimate dream team in Ultimate Team, FIFA 23 offers unparalleled authenticity and excitement. With realistic player movements, immersive stadiums, and dynamic weather effects, every match feels like a true spectacle. Get ready to step onto the pitch and write your own footballing story in FIFA 23.</p>
+            </div>
+            <div class="col-md-6">
+              <div class="text-center"> <!-- Added to center align -->
+                <div class="image_2"><img src="image/new2.jpg"></div>
+              </div>
+              <div class="price_text">Price AED <span style="color: #3a3a38;">500</span></div>
+              <h1 class="game_text">Video Game</h1>
+              <p class="long_text">Dive into the ultimate football experience with FIFA 23 Ultimate Edition. Immerse yourself in the world's most popular sport with unparalleled realism and excitement. Featuring exclusive content and bonuses, the Ultimate Edition offers fans the complete package to elevate their FIFA journey. Unleash the power of next-gen consoles with stunning graphics and lifelike player animations, bringing every match to life in breathtaking detail. Build your dream team with access to exclusive Ultimate Team packs, featuring top players from around the world. Dominate the pitch in style with exclusive Ultimate Team kits and stadium customization options. Plus, enjoy early access to the game, allowing you to hit the ground running and start your footballing adventure before anyone else.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- product section end -->
+  <!-- video section start -->
+  <div class="video_container1">
+    <video autoplay muted loop>
+        <source src="image/FIFA 23 Reveal Trailer _ The World’s Game.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Image positioned within the video container -->
+    <div class="image_overlay">
+        <img src="image/x3y46ooo.png" alt="Overlay Image">
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <!-- video section end -->
+  <!-- testimonial section start -->
+  
+  <!-- contact section end -->
+  <!-- footer section start -->
+  <div class="section_footer ">
+      <div class="container"> 
+          <div class="footer_section_2">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h2 class="account_text">About FIFA 23</h2>
+                  <p class="ipsum_text_2">EA SPORTS™ FIFA and Marvel unite to bring more of football’s fan-favourites back to the pitch in FIFA 23, transforming FUT Heroes into Super Heroes.</p>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                  <h2 class="account_text">LATEST NEWS</h2>
+                  <div class="useful_link">
+                    <ul>
+                      <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-23/news">FIFA 23 NEWS</a></li>
+                      <li><a href="https://www.ea.com/en-gb/games/fifa/fifa-mobile">FIFA MOBILE</a></li>
+                      <li><a href="https://www.ea.com/games/fifa/compete/fgs-23?isLocalized=true">FIFA GLOBAL SERIES</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                </div>
+          <div class="col-sm-6 col-md-6 col-lg-3">
+            <h2 class="account_text">CONTACT US</h2>
+            <input type="" class="email_text" placeholder="Enter Your Email" name="Enter Your Email">
+            <button class="subscribr_bt">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+      <div class="social_icon">
+        <ul>
+          <li><a href="https://www.facebook.com/groups/223890916173390/"><img src="image/fb-icon.png"></a></li>
+          <li><a href="https://twitter.com/EASFCDirect?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="image/twitter-icon.png"></a></li>
+          <li><a href="https://lk.linkedin.com/posts/easports_fifa-23-the-fifa-world-cup-activity-7000577728001302529-a0wc"><img src="image/linkdin-icon.png"></a></li>
+          <li><a href="https://www.instagram.com/easportsfut/?hl=en"><img src="image/instagram-icon.png"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- footer section end -->
+  <!-- copyright section start -->
+  <div class="copyright_section">
+    <div class="container">
+      <p class="copyright_text">Copyright 2024 All Right Reserved By <a href="https://www.ea.com/en-gb/games/fifa/fifa-23">EA SPORTS FIFA 23</p>
+    </div>
+  </div>
+  <!-- copyright section end -->
+    <!-- sidebar -->
+    <script src="javascript2.js"></script>
+    <script src="javascript3.js"></script>
+    <script src="javascript4.js"></script>
+</body>
+</html>
